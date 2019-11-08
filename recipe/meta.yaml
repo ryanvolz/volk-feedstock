@@ -53,8 +53,9 @@ test:
     - test -f $PREFIX/lib/lib{{ volk_lib }}${SHLIB_EXT}  # [unix]
     - if not exist %PREFIX%\\Library\\bin\\{{ volk_lib }}.dll exit 1  # [win]
     - if not exist %PREFIX%\\Library\\lib\\{{ volk_lib }}.lib exit 1  # [win]
-    - conda inspect linkages -p $PREFIX volk  # [not win]
-    - conda inspect objects -p $PREFIX volk  # [osx]
+
+    # run selection of commands
+    - volk-config-info --version --prefix --cc --cflags --all-machines --avail-machines --machine --alignment --malloc
 
   imports:
     - volk_modtool
