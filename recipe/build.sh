@@ -3,7 +3,6 @@
 mkdir build
 cd build
 cmake \
-    -DBoost_NO_BOOST_CMAKE=ON \
     -DCMAKE_PREFIX_PATH=$PREFIX \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DPYTHON_EXECUTABLE=$PYTHON \

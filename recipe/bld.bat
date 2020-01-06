@@ -6,7 +6,6 @@ cd build
 
 :: configure
 cmake -G "NMake Makefiles JOM" ^
-      -DBoost_NO_BOOST_CMAKE=ON ^
       -DCMAKE_INSTALL_PREFIX:PATH="%LIBRARY_PREFIX%" ^
       -DCMAKE_PREFIX_PATH:PATH="%LIBRARY_PREFIX%" ^
       -DPYTHON_EXECUTABLE:PATH="%PYTHON%" ^

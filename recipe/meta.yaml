@@ -1,12 +1,12 @@
-{% set version = "2.0.0" %}
+{% set version = "2.1.0" %}
 
 package:
   name: volk
   version: {{ version }}
 
 source:
-  url: https://github.com/gnuradio/volk/releases/download/v{{ version }}/volk-v{{ version }}.tar.gz
-  sha256: d4274c4cb07d634f4d5f94f4845fb54156ad45ee03f4cd045496b91967b21c30
+  url: https://github.com/gnuradio/volk/archive/v{{ version }}.tar.gz
+  sha256: fe422f10b880d10cb72bdd1a3362a0f65d2d6d655dd1296459773c89fae51781
 
 build:
   number: 0
@@ -19,18 +19,16 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - cmake >=2.8.12
+    - cmake >=3.8
     - jom  # [win]
     - pkg-config  # [not win]
 
   host:
-    - boost-cpp
     - mako >=0.4.2
     - python
     - six
 
   run:
-    - boost-cpp
     - python
     - six
 
@@ -61,7 +59,7 @@ test:
     - volk_modtool
 
 about:
-  home: http://libvolk.org/
+  home: https://github.com/gnuradio/volk
   license: GPL-3.0
   license_family: GPL
   license_file: COPYING
