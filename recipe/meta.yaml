@@ -24,11 +24,13 @@ requirements:
     - pkg-config  # [not win]
 
   host:
+    - boost-cpp  # [not linux]
     - mako >=0.4.2
     - python
     - six
 
   run:
+    - boost-cpp  # [not linux]
     - python
     - six
 
