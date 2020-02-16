@@ -1,4 +1,4 @@
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 
 package:
   name: volk
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/gnuradio/volk/archive/v{{ version }}.tar.gz
-  sha256: fe422f10b880d10cb72bdd1a3362a0f65d2d6d655dd1296459773c89fae51781
+  sha256: 9745d60c16e7af61b58d3ae0e53e8d4464fd932bb56ae8fd143f6db2e3aa0217
 
 build:
   number: 0
