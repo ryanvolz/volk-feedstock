@@ -12,8 +12,7 @@ build:
   number: 0
   run_exports:
     - {{ pin_subpackage('volk', max_pin='x') }}
-  # windows requires vs2015+ to build and therefore can't build against py2k
-  skip: True  # [win and py2k]
+  skip: True  # [py2k]
 
 requirements:
   build:
@@ -27,12 +26,10 @@ requirements:
     - boost-cpp  # [not linux]
     - mako >=0.4.2
     - python
-    - six
 
   run:
     - boost-cpp  # [not linux]
     - python
-    - six
 
 test:
   commands:
