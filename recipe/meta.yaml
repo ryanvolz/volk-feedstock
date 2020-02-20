@@ -9,7 +9,7 @@ source:
   sha256: fe422f10b880d10cb72bdd1a3362a0f65d2d6d655dd1296459773c89fae51781
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('volk', max_pin='x') }}
   # windows requires vs2015+ to build and therefore can't build against py2k
