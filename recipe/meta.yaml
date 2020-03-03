@@ -1,4 +1,4 @@
-{% set version = "2.2.0" %}
+{% set version = "2.2.1" %}
 
 package:
   name: volk
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/gnuradio/volk/archive/v{{ version }}.tar.gz
-  sha256: 9745d60c16e7af61b58d3ae0e53e8d4464fd932bb56ae8fd143f6db2e3aa0217
+  sha256: 283d088f93774a55cb8be058b3d3b4a06d8bd44d6bc0016416f5a7818dd05db4
 
 build:
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage('volk', max_pin='x') }}
   skip: True  # [py2k]
