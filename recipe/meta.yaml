@@ -1,15 +1,16 @@
-{% set version = "2.2.1" %}
+{% set name = "volk" %}
+{% set version = "2.3.0" %}
 
 package:
-  name: volk
+  name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://github.com/gnuradio/volk/archive/v{{ version }}.tar.gz
-  sha256: 283d088f93774a55cb8be058b3d3b4a06d8bd44d6bc0016416f5a7818dd05db4
+  url: https://github.com/gnuradio/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 236e63ced36c0e29cf2988bca21d4d7bf27ccf20f30b5fa4b489781eeff85dde
 
 build:
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage('volk', max_pin='x') }}
   skip: True  # [py2k]
@@ -59,7 +60,7 @@ test:
 
 about:
   home: https://github.com/gnuradio/volk
-  license: GPL-3.0
+  license: GPL-3.0-or-later
   license_family: GPL
   license_file: COPYING
   summary: 'The Vector Optimized Library of Kernels'
